@@ -24,5 +24,27 @@ class PostsController extends AppController {
         
     }
 
+    function delete()
+    {
+        $this->Post->delete($id);
+        $this->flash('投稿番号'. $id .'は削除されました。', '/');
+    }
+
+    function edit($id = null)
+    {
+        $this->Post->id = $id;
+        if(empty($this->data))
+        {
+            $this->data = $this->Post->read();
+        }
+        else
+        {
+            if($this->Post->save($this->data['Post']))
+            {
+                $this->flash('投稿は更新されました', '/');
+            }
+        } 
+    }
+
 }
 ?>
