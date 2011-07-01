@@ -5,7 +5,6 @@
     <tr>
         <th>Id</th>
         <th>Title</th>
-        <th>Actions</th>
         <th>Created</th>
     </tr>
 
@@ -16,8 +15,9 @@
         <td><?php echo $post['Post']['id']; ?></td>
         <td>
             <?php echo $html->link($post['Post']['title'], "/posts/view/".$post['Post']['id']); ?>
+            <?php echo $html->link('Delete', "/posts/delete/{$post['Post']['id']}", null, '本当に削除しますか？'); ?>
+            <?php echo $html->link('Edit', "/posts/edit/".$post['Post']['id']); ?>
         </td>
-        <td><?php echo $html->link('Delete', "/posts/delete{$post['Post']['id']}", null, '本当に削除しますか？'); ?></td>
         <td><?php echo $post['Post']['created']; ?></td>
     </tr>
     <?php endforeach; ?>
