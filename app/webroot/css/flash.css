@@ -1,0 +1,66 @@
+* { 
+    margin     : 0 ;
+    padding    : 0 ;
+    border     : 0 ;
+    outline    : 0 ;
+    list-style : none ;
+}
+
+html {
+}
+
+body {
+    color : #333;
+} 
+
+a { 
+    color           : #09c ; 
+    text-decoration : underline ; 
+}
+
+a:hover {
+    color: #000;
+}
+
+.clear {
+    clear       : both ;
+    line-height : 0 ;
+}
+
+.left {
+    display : inline ;
+    float   : left ;
+}
+
+.right {
+    display : inline ;
+    float   : right ;
+}
+
+/* Basic Layout */
+
+#page {
+}
+
+#wrapper {
+}
+
+#header {
+}
+
+#contents {
+}
+
+#main {
+
+}
+
+#side {
+
+}
+
+#footer {
+
+}
+
+
