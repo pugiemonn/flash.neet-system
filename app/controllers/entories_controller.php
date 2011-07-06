@@ -12,6 +12,13 @@ class EntoriesController extends AppController {
 
     function add() {
         $this->layout = "flash";
+        if(!empty($this->data))
+        {
+            if($this->Entory->save($this->data))
+            {
+                $this->flash('Flash情報が投稿されました', '/entories');
+            }
+        }
     }
 
 }
