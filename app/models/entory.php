@@ -22,7 +22,14 @@ class Entory extends AppModel {
             'rule' => array('url', true)
         ),
         'thumb_url' => array(
-            'rule' => array('url', true)
+            'url'      => array(
+                'rule'    => array('url', true),
+                'message' => 'Only url is true'
+            ),
+            'notEmpty' => array(
+                'rule'    => 'notEmpty',
+                'message' => 'empty'
+            ),
         ),
         'description' => array(
             'rule'    => array('maxLength', '400'),
