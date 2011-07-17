@@ -1,6 +1,6 @@
 <h1>Flashの情報を追加</h1>
 <?php echo $html->link('Add', "/entories/add") ?>
-
+<?php e($this->element('entories-add-navi')); ?>
 <?php
     //Sanitize::html();
     echo $form->create('Entory');
